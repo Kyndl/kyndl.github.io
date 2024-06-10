@@ -5,6 +5,109 @@
     <style>
         body {
             background-color: #f2f2f2;
+            background-image: url("https://kyndl.github.io/rudolf.png");
+            background-repeat:  repeat;
+            animation: scrollBackground 5s linear infinite;
+        }
+
+        @keyframes scrollBackground {
+            from {
+                background-position: top right;
+            }
+            to {
+                background-position: bottom left;
+            }
+        }
+ 
+        @keyframes blinkCursor {
+            50% {
+                border-right-color: transparent;
+            }
+        }
+
+        @keyframes typeAndDelete {
+            0%,
+            10% {
+                width: 0;
+            }
+            45%,
+            55% {
+                width: 6.2em;
+            } /* adjust width based on content */
+            90%,
+            100% {
+                width: 0;
+            }
+        }
+
+        .terminal-loader {
+            border: 0.1em solid #333;
+            background-color: #1a1a1a;
+            color: rgb(235, 167, 255);
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1em;
+            padding: 1.5em 1em;
+            width: 12em;
+            margin: 100px auto;
+            box-shadow: 0 4px 8px rgba(44, 44, 44, 0.2);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .terminal-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1.5em;
+            background-color: #333;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding: 0 0.4em;
+            box-sizing: border-box;
+        }
+
+        .terminal-controls {
+            float: right;
+        }
+
+        .control {
+            display: inline-block;
+            width: 0.6em;
+            height: 0.6em;
+            margin-left: 0.4em;
+            border-radius: 50%;
+            background-color: #777;
+        }
+
+        .control.close {
+            background-color: #e33;
+        }
+
+        .control.minimize {
+            background-color: #ee0;
+        }
+
+        .control.maximize {
+            background-color: #0b0;
+        }
+
+        .terminal-title {
+            float: left;
+            line-height: 1.5em;
+            color: #eee;
+        }
+
+        .text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.2em solid rgb(249, 89, 255); /* Cursor */
+            animation: typeAndDelete 4s steps(11) infinite,
+                blinkCursor 0.5s step-end infinite alternate;
+            margin-top: 1.5em;
         }
     </style>
 </head>
@@ -15,29 +118,21 @@
     <button>Button 1</button>
     <button>Button 2</button>
     <button>Button 3</button>
+
+    <div class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
+
 </body>
 </html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My GitHub Pages Site</title>
-    <style>
-        body {
-            background-image: url("https://kyndl.github.io/1wgjk66e4xn41-693296715.png");
-            background-size: cover;
-        }
-        .theme-box {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            border: 1px solid black;
-            overflow-y: scroll;
-        }
 
-        .theme-option {
-            padding: 10px;
-            cursor: pointer;
-        }
+
+  
