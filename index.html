@@ -8,19 +8,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
     <title>Spejle´s page</title>
 </head>
-<body>
-    <h1>Spejle´s page</h1>
-    <h2>My interests</h2>
-    <h3>Anime</h3>
-    <h3>Games</h3>
-    <h3>Programing</h3>
-    <h3>Music</h3>
-    <h3>A.I.</h3>
-    <h2>My reviews/opinions</h2>
-    <h3>Anime</h3>
-    <h3>Games</h3>
-    <h3>A.I.</h3>
-    <p class="subtext">Hello am <em>SP</em> and am kinda acustic</p>
+<body onload="loadTheme()"> 
+    <div align="center">
+        <h1>Spejle´s page</h1>
+        <div class="container">
+            <h2 class="heading">My interests</h2>
+            <div class="content">
+                <p>why am I even doing this</p>
+                <div class="nested-container">
+                    <h3 class="nested-heading">Anime</h3>
+                    <div class="nested-content">
+                        <p>idk jjk</p>
+                    </div>
+                </div>
+                <div class="nested-container">
+                    <h3 class="nested-heading">Games</h3>
+                    <div class="nested-content">
+                        <p>funny war crimes games like Stellaris, Rimworld, Hearts of Iron IV</p>
+                    </div>
+                </div>
+                <div class="nested-container">
+                    <h3 class="nested-heading">Programming</h3>
+                    <div class="nested-content">
+                        <p>:skull: C#, maybe a little bit, since calling myself even a beginner in HTML, JS, C++ would be a lie lol</p>
+                    </div>
+                </div>
+                <div class="nested-container">
+                    <h3 class="nested-heading">A.I.</h3>
+                    <div class="nested-content">
+                        <p>I like to make A.I. images </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="heading">My reviews/opinions</h2>
+            <div class="content">
+                <div class="nested-container">
+                    <h3 class="nested-heading">Anime</h3>
+                    <div class="nested-content">
+                        <p>This is the nested hidden content for Anime reviews.</p>
+                    </div>
+                </div>
+                <div class="nested-container">
+                    <h3 class="nested-heading">Games</h3>
+                    <div class="nested-content">
+                        <p>This is the nested hidden content for Games reviews.</p>
+                    </div>
+                </div>
+                <div class="nested-container">
+                    <h3 class="nested-heading">A.I.</h3>
+                    <div class="nested-content">
+                        <p>This is the nested hidden content for A.I. reviews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <p>Spejle 2024 &copy;</p>
+        </div>
+    </div>
 
     <select class="body.theme" id="themeSelector" onchange="changeTheme()">
         <option value="dark">Dark</option>
@@ -29,7 +78,7 @@
         <option value="light-neon">Light Neon</option>
         <option value="aqua">Aqua</option>
         <option value="winter">Winter</option>
-        <option value="anime">Anime</option>
+        <option value="animeWIP">Anime W.I.P. :c</option>
     </select>
 
     <script>
@@ -37,7 +86,31 @@
             var theme = document.getElementById("themeSelector").value;
             var body = document.body;
             body.className = theme;
+            document.cookie = "theme=" + theme + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
         }
+
+        function loadTheme() {
+            var theme = localStorage.getItem("theme");
+            if (theme) {
+                document.getElementById("themeSelector").value = theme;
+                document.body.className = theme;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const headings = document.querySelectorAll('.heading, .nested-heading');
+
+            headings.forEach(heading => {
+                heading.addEventListener('click', () => {
+                    const content = heading.nextElementSibling;
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        content.style.maxHeight = '0px';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

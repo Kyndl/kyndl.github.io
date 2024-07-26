@@ -56,3 +56,38 @@ ascii.anime.background.animation {
         100% { background-image: url('ASCIIAnimeBackgrounAnimationImages\ascii-art(4).txt'); }
       }
 }
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.heading,
+.nested-heading {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.content,
+.nested-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 0 10px;
+}
+
+.content p,
+.nested-content p {
+    margin: 10px 0;
+}
+
+.nested-container {
+    margin-left: 20px;
+    margin-top: 10px;
+}
