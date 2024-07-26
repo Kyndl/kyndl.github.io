@@ -1,138 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Pages Site</title>
-    <style>
-        body {
-            background-color: #f2f2f2;
-            background-image: url("https://kyndl.github.io/rudolf.png");
-            background-repeat:  repeat;
-            animation: scrollBackground 5s linear infinite;
-        }
-
-        @keyframes scrollBackground {
-            from {
-                background-position: top right;
-            }
-            to {
-                background-position: bottom left;
-            }
-        }
- 
-        @keyframes blinkCursor {
-            50% {
-                border-right-color: transparent;
-            }
-        }
-
-        @keyframes typeAndDelete {
-            0%,
-            10% {
-                width: 0;
-            }
-            45%,
-            55% {
-                width: 6.2em;
-            } /* adjust width based on content */
-            90%,
-            100% {
-                width: 0;
-            }
-        }
-
-        .terminal-loader {
-            border: 0.1em solid #333;
-            background-color: #1a1a1a;
-            color: rgb(235, 167, 255);
-            font-family: "Courier New", Courier, monospace;
-            font-size: 1em;
-            padding: 1.5em 1em;
-            width: 12em;
-            margin: 100px auto;
-            box-shadow: 0 4px 8px rgba(44, 44, 44, 0.2);
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        .terminal-header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1.5em;
-            background-color: #333;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            padding: 0 0.4em;
-            box-sizing: border-box;
-        }
-
-        .terminal-controls {
-            float: right;
-        }
-
-        .control {
-            display: inline-block;
-            width: 0.6em;
-            height: 0.6em;
-            margin-left: 0.4em;
-            border-radius: 50%;
-            background-color: #777;
-        }
-
-        .control.close {
-            background-color: #e33;
-        }
-
-        .control.minimize {
-            background-color: #ee0;
-        }
-
-        .control.maximize {
-            background-color: #0b0;
-        }
-
-        .terminal-title {
-            float: left;
-            line-height: 1.5em;
-            color: #eee;
-        }
-
-        .text {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 0.2em solid rgb(249, 89, 255); /* Cursor */
-            animation: typeAndDelete 4s steps(11) infinite,
-                blinkCursor 0.5s step-end infinite alternate;
-            margin-top: 1.5em;
-        }
-    </style>
+    <link rel="stylesheet" href="themes.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a page about me Spejle">
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <title>Spejle´s page</title>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site!</h1>
-    <p>This is a placeholder page for my GitHub Pages site.</p>
-    
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
+    <h1>Spejle´s page</h1>
+    <h2>My interests</h2>
+    <h3>Anime</h3>
+    <h3>Games</h3>
+    <h3>Programing</h3>
+    <h3>Music</h3>
+    <h3>A.I.</h3>
+    <h2>My reviews/opinions</h2>
+    <h3>Anime</h3>
+    <h3>Games</h3>
+    <h3>A.I.</h3>
+    <p class="subtext">Hello am <em>SP</em> and am kinda acustic</p>
 
-    <div class="terminal-loader">
-        <div class="terminal-header">
-          <div class="terminal-title">Status</div>
-          <div class="terminal-controls">
-            <div class="control close"></div>
-            <div class="control minimize"></div>
-            <div class="control maximize"></div>
-          </div>
-        </div>
-        <div class="text">Loading...</div>
-      </div>
+    <select class="body.theme" id="themeSelector" onchange="changeTheme()">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="dark-neon">Dark Neon</option>
+        <option value="light-neon">Light Neon</option>
+        <option value="aqua">Aqua</option>
+        <option value="winter">Winter</option>
+        <option value="anime">Anime</option>
+    </select>
 
+    <script>
+        function changeTheme() {
+            var theme = document.getElementById("themeSelector").value;
+            var body = document.body;
+            body.className = theme;
+        }
+    </script>
 </body>
 </html>
-
-
-  

@@ -1,0 +1,58 @@
+p.subtext {
+    color: #f50000;
+    font-size: 2em;
+    font-family: "Zain";
+}
+em {
+    color: #ff0000;
+    font-size: 1.5em;
+    font-style: bold;
+}
+p.title {
+    color: #ea00ff;
+    font-size: 1.5em;
+    font-style: bold;
+}
+
+body.dark {
+    background-color: rgb(19, 19, 19);
+    color : rgb(172, 172, 172)
+}
+body.light {
+    background-color: white;
+    color : rgb(19, 19, 19);
+}
+body.dark-neon{
+    background-color: #312244;
+    color: #006466;
+}
+body.light-neon{
+    background-color: #6930c3;
+    color: #48bfe3;
+}
+body.aqua{
+    background-color: #00b4d8;
+    color: #235d6e;
+}
+body.winter{
+    background-color: #a3b1bb;
+    color: #4f6472;
+}
+body.anime{
+    background-color: #ff4d4d;
+    color: #ffaf40;
+}
+
+ascii.anime.background.animation {
+    width: 200px; /* Adjust width */
+    height: 100px; /* Adjust height */
+    background-image: url('frame1.png');
+    background-size: cover;
+    animation: changeFrame 1s steps(3) infinite;
+    @keyframes changeFrame {
+        0% { background-image: url('ASCIIAnimeBackgrounAnimationImages\ascii-art(1).txt'); }
+        33% { background-image: url('ASCIIAnimeBackgrounAnimationImages\ascii-art(2).txt'); }
+        67% { background-image: url('ASCIIAnimeBackgrounAnimationImages\ascii-art(3).txt'); }
+        100% { background-image: url('ASCIIAnimeBackgrounAnimationImages\ascii-art(4).txt'); }
+      }
+}
