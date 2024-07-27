@@ -18,27 +18,61 @@ body.dark {
     background-color: rgb(19, 19, 19);
     color : rgb(172, 172, 172)
 }
+body.dark .container {
+    background-color: rgb(19, 19, 19);
+    color : rgb(172, 172, 172)
+}
+
 body.light {
     background-color: white;
     color : rgb(19, 19, 19);
 }
+body.light .container {
+    background-color: white;
+    color : rgb(19, 19, 19);
+}
+
 body.dark-neon{
     background-color: #312244;
     color: #006466;
 }
+body.dark-neon .container {
+    background-color: #312244;
+    color: #006466;
+}	
+
 body.light-neon{
     background-color: #6930c3;
     color: #48bfe3;
 }
+body.light-neon .container {
+    background-color: #6930c3;
+    color: #48bfe3;
+}
+
 body.aqua{
     background-color: #00b4d8;
     color: #235d6e;
 }
+body.aqua .container {
+    background-color: #00b4d8;
+    color: #235d6e;
+}
+
 body.winter{
     background-color: #a3b1bb;
     color: #4f6472;
 }
+body.winter .container {
+    background-color: #a3b1bb;
+    color: #4f6472;
+}
+
 body.anime{
+    background-color: #ff4d4d;
+    color: #ffaf40;
+}
+body.anime .container {
     background-color: #ff4d4d;
     color: #ffaf40;
 }
