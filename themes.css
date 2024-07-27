@@ -7,7 +7,7 @@ body.dark {
     background-color: rgb(19, 19, 19);
     color : rgb(172, 172, 172)
 }
-body.dark .container {
+body.dark .nested-headin {
     background-color: rgb(19, 19, 19);
     color : rgb(190, 0, 0)
 }
@@ -16,16 +16,16 @@ body.light {
     background-color: white;
     color : rgb(19, 19, 19);
 }
-body.light .container {
+body.light .nested-headin {
     background-color: white;
     color : rgb(19, 19, 19);
 }
 
-body.dark-neon{
+body.nested-headin{
     background-color: #312244;
     color: #006466;
 }
-body.dark-neon .container {
+body.dark-neon .nested-headin {
     background-color: #312244;
     color: #006466;
 }	
@@ -34,7 +34,7 @@ body.light-neon{
     background-color: #6930c3;
     color: #48bfe3;
 }
-body.light-neon .container {
+body.light-neon .nested-headin {
     background-color: #6930c3;
     color: #48bfe3;
 }
@@ -43,7 +43,7 @@ body.aqua{
     background-color: #00b4d8;
     color: #235d6e;
 }
-body.aqua .container {
+body.aqua .nested-headin {
     background-color: #00b4d8;
     color: #235d6e;
 }
@@ -52,7 +52,7 @@ body.winter{
     background-color: #a3b1bb;
     color: #4f6472;
 }
-body.winter .container {
+body.winter .nested-headin {
     background-color: #a3b1bb;
     color: #4f6472;
 }
@@ -61,7 +61,7 @@ body.anime{
     background-color: #ff4d4d;
     color: #ffaf40;
 }
-body.anime .container {
+body.anime .nested-headin {
     background-color: #ff4d4d;
     color: #ffaf40;
 }
