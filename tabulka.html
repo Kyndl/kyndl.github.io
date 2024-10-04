@@ -7,7 +7,7 @@
             border-collapse: collapse;
         }
         table, th, td {
-            border: 2px solid black;
+            border: 2px solid rgb(100, 100, 100);
         } 
         th, td {
             padding: 15px;
@@ -15,52 +15,67 @@
         }
         th {
             background-color: #9c1b1b;
+            font-weight: bold;
         }
+        h1 {
+            text-align: center;
+        }
+        h1, td,th,p {
+            font-family: Arial, sans-serif;
+            color: whitesmoke;
+        }
+        body {
+            background-color: #1b1b1b;
+        }
+        tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
     </style>    
     <title>Tabulka</title>
 </head>
 <body>
-    <h1>nadpis</h1>
+    <h1>Model TCP-IP a ISO/OSI a jejich vysvětlení</h1>
     <table>
         <tr>
-            <th>TCP-IP</th>
-            <th>ISO/OSI</th>
-            <th>Význam</th>
+            <th scope="col">TCP-IP</th>
+            <th scope="col">ISO/OSI</th>
+            <th scope="col">Význam</th>
         </tr>
         <tr>
-            <td>Aplikační</td>
-            <td>Aplikační</td>
-            <td>Odpovídá aplikacím a uživatelskému rozhraní</td>
+            <td style="background-color:rgb(192, 192, 0)">Aplikační</td>
+            <td style= "background-color:rgb(192, 192, 0) ">Aplikační</td>
+            <td>Zajišťuje komunikaci mezi uživatelskými aplikacemi a sítí, umožňuje přístup ke službám, jako je e-mail nebo webové prohlížení.</td>
         </tr>
         <tr>
-            <td>Aplikační</td>
-            <td>Prezenční</td>
-            <td>Spravuje přístup k síťovým službám</td>
+            <td style="background-color:rgb(173, 173, 0)">Aplikační</td>
+            <td style="background-color:rgb(173, 173, 0)">Prezenční</td>
+            <td>Zodpovídá za převod dat do formátu, který je čitelný pro aplikace, včetně šifrování a komprese.</td>
         </tr>
         <tr>
-            <td>Aplikační</td>
-            <td>Relační</td>
-            <td>Umožňuje organizaci a správu dat</td>
+            <td style="background-color:yellowgreen">Aplikační</td>
+            <td style="background-color:yellowgreen">Relační</td>
+            <td>Spravuje a udržuje komunikaci mezi aplikacemi, zajišťuje zahájení, správu a ukončení relací mezi zařízeními.</td>
         </tr>
         <tr>
-            <td>Transportní</td>
-            <td>Transportní</td>
-            <td>Zajišťuje spolehlivý přenos dat</td>
+            <td style="background-color:rgb(0, 207, 0)">Transportní</td>
+            <td style="background-color:rgb(0, 207, 0)">Transportní</td>
+            <td>Zodpovídá za spolehlivou dopravu dat mezi koncovými zařízeními, zahrnuje řízení toku, kontrolu chyb a opakované přenosy.</td>
         </tr>
         <tr>
-            <td>Síťová</td>
-            <td>Síťová</td>
-            <td>Odpovídá za směrování datových paketů</td>
+            <td style="background-color:rgb(0, 216, 216)">Síťová</td>
+            <td style="background-color:rgb(0, 216, 216)">Síťová</td>
+            <td>Zajišťuje adresování a směrování paketů mezi různými sítěmi, umožňuje výběr optimální trasy k cíli.</td>
         </tr>
         <tr>
-            <td>Síťová</td>
-            <td>Linková</td>
-            <td>Spravuje komunikaci na úrovni linky</td>
+            <td style="background-color:orange">Síťová</td>
+            <td style="background-color:rgb(214, 32, 93)">Linková</td>
+            <td>Zodpovídá za správu přenosu dat mezi dvěma přímými uzly, detekuje a opravuje chyby na fyzické vrstvě.</td>
         </tr>
         <tr>
-            <td>Síťová</td>
-            <td>Fyzická</td>
-            <td>Zajišťuje fyzický přenos dat</td>
+            <td style="background-color:orange">Síťová</td>
+            <td style="background-color:red">Fyzická</td>
+            <td>Spravuje fyzické spojení mezi zařízeními, zahrnuje kabely, signály, konektory a elektrické parametry.</td>
         </tr>
     </table>
 </body>
