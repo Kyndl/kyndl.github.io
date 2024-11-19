@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seznam</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        h4 {
+            color: #4b4b4b;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        ul, ol, dl {
+            margin: 0;
+            padding: 0;
+            list-style-position: outside;
+        }
+        ul li, ol li, dl dt, dl dd {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        dl dt {
+            font-weight: bold;
+            color: #333;
+        }
+        .flex-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .flex-item {
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #e0554d;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item">
+                <h4>Nákupní seznam</h4>
+                <ul>
+                    <li>Mléko</li>
+                    <li>Sýr</li>
+                    <li>Zelenina</li>
+                </ul>
+            </div>
+
+            <div class="flex-item">
+                <h4>Seznam dopravních prostředků</h4>
+                <ol>
+                    <li>Auto</li>
+                    <li>Letadlo</li>
+                    <li>Tramvaj</li>
+                </ol>
+            </div>
+
+            <div class="flex-item">
+                <h4>Popisný seznam</h4>
+                <dl>
+                    <dt>Mléko</dt>
+                    <dd>- Základní nápoj</dd>
+                    <dt>Sýr</dt>
+                    <dd>- Mlékárenský produkt</dd>
+                    <dt>Zelenina</dt>
+                    <dd>- Zdravé jídlo</dd>
+                </dl>
+            </div>
+        </div>
+        <button onclick="window.location.href='https://kyndl.github.io/tabulka.html'">Zpět</button>
+    </div>
+</body>
+</html>
