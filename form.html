@@ -12,28 +12,68 @@
                 padding: 1em;
                 border: 1px solid #ccc;
                 border-radius: 1em;
+                background-color: #f9f9f9;
+            }
+            label, input {
+                display: block;
+                margin-bottom: 0.5em;
+                width: 100%;
+            }
+            input[type="text"], input[type="password"], input[type="email"] {
+                padding: 0.5em;
+                border: 1px solid #ccc;
+                border-radius: 0.5em;
+                box-sizing: border-box;
+            }
+            input[type="checkbox"], input[type="radio"] {
+                display: inline-block;
+                width: auto;
+            }
+            input[type="submit"] {
+                padding: 0.7em;
+                color: #fff;
+                background-color: #007BFF;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+            button {
+                margin-top: 1em;
+                padding: 0.7em;
+                color: #fff;
+                background-color: #6c757d;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #5a6268;
             }
         </style>
     </head>
     <body>
 <form>
-    <label for="user">Přezdívka:</label><br>
-    <input type="text" id="user" name="user"><br>
+    <label for="user">Přezdívka:</label>
+    <input type="text" id="user" name="user">
 
-    <label for="Email">Email:</label><br>   
-    <input type="text" id="Email" name="Email">
+    <label for="Email">Email:</label>
+    <input type="email" id="Email" name="Email">
 
-    <label for="password">Heslo:</label><br>
+    <label for="password">Heslo:</label>
     <input type="password" id="password" name="password">
 
-    <label for="robot">Jsi robot:</label><br>
+    <label for="robot">Jsi robot:</label>
     <input type="checkbox" id="robot" name="robot">
 
-    <label for="radio">Muž nebo Žena:</label><br>
-    <input type="radio" id="gender" name="gender"> 
-    <input type="radio" id="gender" name="gender">
+    <label for="radio">Muž nebo Žena:</label>
+    <input type="radio" id="gender" name="gender"> Muž
+    <input type="radio" id="gender" name="gender"> Žena
 
-    <label for="submit"> </label><br>
     <input type="submit" value="Potvrzení">
 </form>
+<button onclick="window.location.href='https://kyndl.github.io/prg.html'">Zpět</button>
 </body>
+</html>
