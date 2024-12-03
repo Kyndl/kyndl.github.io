@@ -95,4 +95,37 @@ h1 {
     background-color: rgba(54, 10, 93, 0.8);
     color: #e500ff;
     padding: 20px;
-    width: 100
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Button Links */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #e500ff;
+    background-color: #2f006f;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+}
