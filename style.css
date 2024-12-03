@@ -1,67 +1,125 @@
-<style>
-    /* General Table Styling */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        border-radius: 10px; /* Rounded corners */
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    }
-    table, th, td {
-        border: none; /* Remove hard borders */
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1b29; /* Dark purple background */
+    color: #f5f5f5; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #b39ddb; /* Soft purple */
+    margin-bottom: 10px;
+}
+
+a {
+    color: #9575cd; /* Light purple */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d1c4e9; /* Softer hover color */
+}
+
+/* Navbar */
+nav {
+    background: #6a1b9a; /* Rich purple */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+nav a:hover {
+    color: #fff; /* Bright hover effect */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #7b1fa2, #512da8);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9575cd;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d1c4e9;
+    color: #000;
+}
+
+/* Cards */
+.card {
+    background: #292742;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #b39ddb;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4a148c; /* Deep purple */
+    color: #f5f5f5;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
     }
 
-    /* Header Styling */
-    th {
-        background: linear-gradient(45deg, #6a0dad, #4b0082); /* Gradient header */
-        font-weight: bold;
-        color: #f0e68c; /* Light yellow text */
-        padding: 15px;
-        text-align: center;
-        font-size: 1.2em;
+    .hero {
+        padding: 50px 10px;
     }
 
-    /* Cell Styling */
-    td {
-        background: #1e1e2f; /* Darker background for cells */
-        color: #dcdcdc; /* Light gray text */
-        padding: 15px;
-        text-align: center;
-        font-size: 1em;
+    .hero h1 {
+        font-size: 2rem;
     }
-
-    /* Body Background */
-    body {
-        background-color: #121212; /* Dark background */
-        font-family: Arial, sans-serif;
-        color: #dcdcdc;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Hover Effect */
-    tr:hover td {
-        background: rgba(106, 13, 173, 0.2); /* Light purple hover */
-        transition: background 0.3s ease; /* Smooth hover transition */
-    }
-
-    /* Table Row Separators */
-    tr:nth-child(odd) td {
-        background: #161625; /* Slightly lighter for alternating rows */
-    }
-
-    /* Header and Page Title Styling */
-    h1 {
-        text-align: center;
-        color: #ff00ff; /* Neon magenta */
-        font-size: 2.5em;
-        margin: 20px 0;
-        text-shadow: 0 0 10px rgba(255, 0, 255, 0.7); /* Glow effect */
-    }
-
-    p {
-        text-align: center;
-        font-size: 1.1em;
-        color: #a8a8ff; /* Soft purple for additional text */
-    }
-</style>
+}
