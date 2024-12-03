@@ -1,87 +1,67 @@
-/* General Body Styling */
-body {
-    background-image: url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80'); /* Cyberpunk cityscape */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #e5e5ff;
-    height: 100vh;
-}
+<style>
+    /* General Table Styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+    table, th, td {
+        border: none; /* Remove hard borders */
+    }
 
-/* Form Container */
-form {
-    margin: auto;
-    width: 320px;
-    padding: 20px;
-    border: 1px solid #8c33ff;
-    border-radius: 10px;
-    background: rgba(20, 20, 50, 0.9);
-    box-shadow: 0px 0px 10px 2px #a020f0;
-}
+    /* Header Styling */
+    th {
+        background: linear-gradient(45deg, #6a0dad, #4b0082); /* Gradient header */
+        font-weight: bold;
+        color: #f0e68c; /* Light yellow text */
+        padding: 15px;
+        text-align: center;
+        font-size: 1.2em;
+    }
 
-/* Input Fields */
-label, input, button {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-}
+    /* Cell Styling */
+    td {
+        background: #1e1e2f; /* Darker background for cells */
+        color: #dcdcdc; /* Light gray text */
+        padding: 15px;
+        text-align: center;
+        font-size: 1em;
+    }
 
-input[type="text"], input[type="password"], input[type="email"] {
-    padding: 10px;
-    border: 1px solid #8c33ff;
-    border-radius: 5px;
-    background: rgba(50, 50, 100, 0.8);
-    color: #fff;
-}
+    /* Body Background */
+    body {
+        background-color: #121212; /* Dark background */
+        font-family: Arial, sans-serif;
+        color: #dcdcdc;
+        margin: 0;
+        padding: 0;
+    }
 
-input[type="submit"], button {
-    padding: 12px;
-    color: #fff;
-    background-color: #a020f0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+    /* Hover Effect */
+    tr:hover td {
+        background: rgba(106, 13, 173, 0.2); /* Light purple hover */
+        transition: background 0.3s ease; /* Smooth hover transition */
+    }
 
-input[type="submit"]:hover, button:hover {
-    background-color: #b300ff;
-}
+    /* Table Row Separators */
+    tr:nth-child(odd) td {
+        background: #161625; /* Slightly lighter for alternating rows */
+    }
 
-/* Content Box */
-.content {
-    background-color: rgba(15, 15, 50, 0.95);
-    color: #e5e5ff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #8c33ff;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-}
+    /* Header and Page Title Styling */
+    h1 {
+        text-align: center;
+        color: #ff00ff; /* Neon magenta */
+        font-size: 2.5em;
+        margin: 20px 0;
+        text-shadow: 0 0 10px rgba(255, 0, 255, 0.7); /* Glow effect */
+    }
 
-/* Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    color: #e5e5ff;
-    background: rgba(20, 20, 50, 0.8);
-}
-
-th, td {
-    border: 1px solid #8c33ff;
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background: #6a1b9a;
-}
-
-tr:hover {
-    background: rgba(140, 51, 255, 0.2);
-}
+    p {
+        text-align: center;
+        font-size: 1.1em;
+        color: #a8a8ff; /* Soft purple for additional text */
+    }
+</style>
