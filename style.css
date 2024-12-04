@@ -1,3 +1,4 @@
+/* General body styles */
 body {
     margin: 0;
     padding: 0;
@@ -6,71 +7,24 @@ body {
     color: #333;
 }
 
-.PRG {
-    background-image: url('https://plus.unsplash.com/premium_photo-1678990345948-4843f1522120?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.content {
-    background-color: rgba(54, 10, 93, 0.8);
-    color: #e500ff;
-    padding: 20px;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    size: 90px;
-}
-
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #e500ff;
-    background-color: #2f006f;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 1;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.button-link:hover {
-    background-color: #0056b3;
-}
-
-/* New styles */
-.container {
+/* Container styles */
+.seznam-container {
     padding: 20px;
     text-align: center;
 }
 
-.flex-container {
+/* Flex container styles */
+.seznam-flex-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.flex-item {
+/* Individual item styles */
+.seznam-item-nakup,
+.seznam-item-doprava,
+.seznam-item-popis {
     background-color: #2f006f;
     color: #e500ff;
     padding: 20px;
@@ -80,24 +34,50 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.flex-item img {
+/* Image styles */
+.seznam-img-nakup,
+.seznam-img-doprava,
+.seznam-img-popis {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
-.flex-item h4 {
+/* Title styles */
+.seznam-title-nakup,
+.seznam-title-doprava,
+.seznam-title-popis {
     margin-bottom: 10px;
 }
 
-.flex-item ul, .flex-item ol, .flex-item dl {
+/* List styles */
+.seznam-list-nakup,
+.seznam-list-doprava,
+.seznam-list-popis {
     margin: 0;
     padding: 0;
     list-style: none;
     color: #fff;
 }
 
-button {
+/* Unique list items */
+.seznam-item-mleko,
+.seznam-item-syr,
+.seznam-item-zelenina,
+.seznam-item-auto,
+.seznam-item-letadlo,
+.seznam-item-tramvaj,
+.seznam-item-mleko-dt,
+.seznam-item-mleko-dd,
+.seznam-item-syr-dt,
+.seznam-item-syr-dd,
+.seznam-item-zelenina-dt,
+.seznam-item-zelenina-dd {
+    margin: 5px 0;
+}
+
+/* Button styles */
+.seznam-button-back {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -108,6 +88,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.seznam-button-back:hover {
     background-color: #0056b3;
 }
