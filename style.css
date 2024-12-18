@@ -1,4 +1,4 @@
-/* General body styles */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,16 +6,16 @@ body {
     background-color: rgba(176, 38, 255, 0.5); 
     color: #333;
     background-image: url("https://img.freepik.com/free-vector/realistic-neon-lights-background_52683-59889.jpg?semt=ais_hybrid");
+    background-size: cover;
 }
 
-/* Container styles */
 .seznam-container {
     padding: 20px;
     background-color: rgba(176, 38, 255, 0.5); 
     text-align: center;
 }
 
-/* Flex container styles */
+
 .seznam-flex-container {
     display: flex;
     justify-content: space-around;
@@ -23,7 +23,7 @@ body {
     gap: 20px;
 }
 
-/* Individual item styles */
+
 .seznam-item-nakup,
 .seznam-item-doprava,
 .seznam-item-popis {
@@ -36,7 +36,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Image styles */
+
 .seznam-img-nakup,
 .seznam-img-doprava,
 .seznam-img-popis {
@@ -45,14 +45,14 @@ body {
     margin-bottom: 15px;
 }
 
-/* Title styles */
+
 .seznam-title-nakup,
 .seznam-title-doprava,
 .seznam-title-popis {
     margin-bottom: 10px;
 }
 
-/* List styles */
+
 .seznam-list-nakup,
 .seznam-list-doprava,
 .seznam-list-popis {
@@ -62,7 +62,7 @@ body {
     color: #fff;
 }
 
-/* Unique list items */
+
 .seznam-item-mleko,
 .seznam-item-syr,
 .seznam-item-zelenina,
@@ -78,7 +78,7 @@ body {
     margin: 5px 0;
 }
 
-/* Button styles */
+
 .seznam-button-back {
     margin-top: 20px;
     padding: 10px 20px;
@@ -92,4 +92,23 @@ body {
 
 .seznam-button-back:hover {
     background-color: #0056b3;
+}
+
+.button-containerprg {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-linkprg {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e500ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
 }
