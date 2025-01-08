@@ -1,9 +1,26 @@
-body {
+:root {
+    --primary-bg-color: rgba(20, 20, 60, 0.9);
+    --secondary-bg-color: rgba(25, 0, 60, 0.95);
+    --highlight-color: #7a5cff;
+    --primary-font-color: #e0e0ff;
+    --accent-color: #5a33b5;
+    --secondary-font-color: #c9a8ff;
+    --box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    --hover-color: #693dd1;
+    --button-hover-bg-color: #7a5cff;
+    --button-hover-scale: 1.05;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: rgba(20, 20, 60, 0.9);
-    color: #e0e0ff;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
     background-image: url("modern-city-highway-street-lamps-light-neon-cartoon-vector-illustration_33099-1403.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,8 +30,8 @@ body {
 
 table {
     width: 100%;
-    border: 2px solid #7a5cff;
-    background-color: rgba(25, 0, 60, 0.95);
+    border: 2px solid var(--highlight-color);
+    background-color: var(--secondary-bg-color);
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -22,40 +39,45 @@ table {
 table th, table td {
     border: 2px solid #5a33b5;
     padding: 12px;
-    color: #c9a8ff;
+    color: var(--secondary-font-color);
     text-align: left;
 }
 
 table th:hover, table td:hover {
-    background-color: #693dd1;
+    background-color: var(--hover-color);
     color: #ffffff;
-    text-transform: uppercase;
+}
+
+.bodyform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    justify-content: center;
+    width: 35%;
     align-items: center;
     padding: 20px;
     background-color: rgba(42, 0, 80, 0.9);
     border-radius: 15px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     margin: 20px 0;
 }
 
-.form input[type="text"],
 .form input[type="email"],
 .form input[type="password"],
 .form textarea {
-    width: 70%;
+    width: 30%;
     padding: 10px;
     margin: 10px 0;
     border: 2px solid #5a33b5;
     border-radius: 5px;
-    background-color: rgba(25, 0, 60, 0.95);
-    color: #c9a8ff;
-    font-size: 16px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-font-color);
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -63,16 +85,16 @@ table th:hover, table td:hover {
 .form input[type="email"]:focus,
 .form input[type="password"]:focus,
 .form textarea:focus {
-    border-color: #7a5cff;
-    box-shadow: 0 0 10px #7a5cff;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 10px var(--highlight-color);
     outline: none;
 }
 
 .form input[type="submit"] {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #ffffff;
-    background-color: #5a33b5;
+    background-color: var(--accent-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -81,8 +103,8 @@ table th:hover, table td:hover {
 }
 
 .form input[type="submit"]:hover {
-    background-color: #7a5cff;
-    transform: scale(1.05);
+    background-color: var(--highlight-color);
+    transform: scale(var(--button-hover-scale));
 }
 
 .seznam-container {
@@ -90,7 +112,7 @@ table th:hover, table td:hover {
     background-color: rgba(42, 0, 80, 0.9);
     text-align: center;
     border-radius: 15px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
 
 .seznam-flex-container {
@@ -133,8 +155,8 @@ table th:hover, table td:hover {
 .seznam-title-doprava,
 .seznam-title-popis {
     margin-bottom: 10px;
-    font-size: 18px;
-    color: #c9a8ff;
+    font-size: 1.125rem;
+    color: var(--secondary-font-color);
     text-transform: uppercase;
 }
 
@@ -160,16 +182,16 @@ table th:hover, table td:hover {
 .seznam-item-zelenina-dt,
 .seznam-item-zelenina-dd {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.seznam-button-back {
-    margin-top: 20px;
+.seznam-button-back,
+.button-linkprg {
     padding: 10px 20px;
-    font-size: 16px;
-    width: 10%;
+    font-size: 1rem;
     color: #ffffff;
-    background-color: #5a33b5;
+    background-color: var(--accent-color);
+    width: 10%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -177,31 +199,14 @@ table th:hover, table td:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.seznam-button-back:hover {
-    background-color: #7a5cff;
-    transform: scale(1.05);
+.seznam-button-back:hover,
+.button-linkprg:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: scale(var(--button-hover-scale));
 }
 
 .button-containerprg {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-}
-
-.button-linkprg {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #5a33b5;
-    width: 10%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button-linkprg:hover {
-    background-color: #7a5cff;
-    transform: scale(1.05);
 }
