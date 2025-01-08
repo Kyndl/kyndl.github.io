@@ -1,20 +1,97 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: rgba(176, 38, 255, 0.5); 
-    color: #333;
-    background-image: url("https://img.freepik.com/free-vector/realistic-neon-lights-background_52683-59889.jpg?semt=ais_hybrid");
+    background-color: rgba(20, 20, 60, 0.9);
+    color: #e0e0ff;
+    background-image: url("modern-city-highway-street-lamps-light-neon-cartoon-vector-illustration_33099-1403.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    background-position: center;
+}
+
+table {
+    width: 100%;
+    border: 2px solid #7a5cff;
+    background-color: rgba(25, 0, 60, 0.95);
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 2px solid #5a33b5;
+    padding: 12px;
+    color: #c9a8ff;
+    text-align: left;
+}
+
+table th:hover, table td:hover {
+    background-color: #693dd1;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(42, 0, 80, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form textarea {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #5a33b5;
+    border-radius: 5px;
+    background-color: rgba(25, 0, 60, 0.95);
+    color: #c9a8ff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus,
+.form textarea:focus {
+    border-color: #7a5cff;
+    box-shadow: 0 0 10px #7a5cff;
+    outline: none;
+}
+
+.form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #5a33b5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #7a5cff;
+    transform: scale(1.05);
 }
 
 .seznam-container {
     padding: 20px;
-    background-color: rgba(176, 38, 255, 0.5); 
+    background-color: rgba(42, 0, 80, 0.9);
     text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
-
 
 .seznam-flex-container {
     display: flex;
@@ -23,19 +100,25 @@ body {
     gap: 20px;
 }
 
-
 .seznam-item-nakup,
 .seznam-item-doprava,
 .seznam-item-popis {
-    background-color: #2f006f;
-    color: #e500ff;
+    background-color: #3e008e;
+    color: #d9b3ff;
     padding: 20px;
     border-radius: 10px;
     max-width: 300px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+.seznam-item-nakup:hover,
+.seznam-item-doprava:hover,
+.seznam-item-popis:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(150, 50, 255, 0.8);
+}
 
 .seznam-img-nakup,
 .seznam-img-doprava,
@@ -43,15 +126,17 @@ body {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
-
 
 .seznam-title-nakup,
 .seznam-title-doprava,
 .seznam-title-popis {
     margin-bottom: 10px;
+    font-size: 18px;
+    color: #c9a8ff;
+    text-transform: uppercase;
 }
-
 
 .seznam-list-nakup,
 .seznam-list-doprava,
@@ -59,9 +144,8 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: #fff;
+    color: #ffffff;
 }
-
 
 .seznam-item-mleko,
 .seznam-item-syr,
@@ -76,22 +160,26 @@ body {
 .seznam-item-zelenina-dt,
 .seznam-item-zelenina-dd {
     margin: 5px 0;
+    font-size: 16px;
 }
-
 
 .seznam-button-back {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #e500ff;
+    width: 10%;
+    color: #ffffff;
+    background-color: #5a33b5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .seznam-button-back:hover {
-    background-color: #0056b3;
+    background-color: #7a5cff;
+    transform: scale(1.05);
 }
 
 .button-containerprg {
@@ -103,12 +191,17 @@ body {
 .button-linkprg {
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #e500ff;
+    color: #ffffff;
+    background-color: #5a33b5;
+    width: 10%;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-linkprg:hover {
+    background-color: #7a5cff;
+    transform: scale(1.05);
 }
