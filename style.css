@@ -65,7 +65,7 @@ table th:hover, table td:hover {
     border-radius: 15px;
     box-shadow: var(--box-shadow);
     margin: 20px 0;
-}
+}   
 
 .form input[type="email"],
 .form input[type="password"],
@@ -197,7 +197,12 @@ table th:hover, table td:hover {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Add vertical spacing */
+    margin-top: 50px; /* Adjust value as needed */
+    margin-bottom: 20px; /* Adjust value as needed */
 }
+
 
 .seznam-button-back:hover,
 .button-linkprg:hover {
@@ -209,4 +214,29 @@ table th:hover, table td:hover {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+
+/* div.html zadaní */
+.div2 {
+    color:blue;
+    height: 200px;
+    top:auto;
+    border:black;
+    background-color: rgb(88, 44, 44);
+    text-align: center;
+}
+
+.pdiv2 {
+    color:blue;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+}
+
+.gradientDiv1 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, red, purple, blue);
 }
